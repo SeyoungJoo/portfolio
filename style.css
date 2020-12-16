@@ -316,70 +316,26 @@ p {
 }
 
 /* Skill */
-
-#skills {
-  background-color: #bedbbb;
+.section__skills {
+  margin: 200px auto;
+  text-align: center;
 }
 
-.skillset {
-  display: flex;
-  background-color: lightslategray;
-  color: var(--color-white);
-  margin: 20px 0;
+.skill__header {
+  margin-bottom: 32px;
 }
 
-.skillset__title {
-  color: var(--color-light-white);
-  margin: auto;
+.skill__button {
+  font-size: 16px;
+  border: 1px solid var(--color-blue);
+  border-radius: 32px;
+  width: 80px;
+  padding: 8px 16px;
+  margin: 0 5px;
 }
 
-.skillset__left {
-  flex-basis: 60%;
-  background-color: darkgray;
-  padding: 20px 40px;
-}
-
-.skill {
-  margin-bottom: 8px;
-}
-
-.skill__description {
-  display: flex;
-  justify-content: space-between;
-}
-
-.skill__bar {
-  width: 100%; /*div는 안에 컨텐츠가 없기 때문에 width나 height를 지정해주어야 함*/
-  height: 3px;
-  background-color: grey;
-}
-
-.skill__value1 {
-  width: 100%;
-  height: 3px;
-  background-color: orange;
-}
-
-.skill__value2 {
-  width: 90%;
-  height: 3px;
-  background-color: orange;
-}
-
-/* skill__value에서 오렌지색상으로 스킬바를 채우는 부분을 html에서 주는거라고 하셨는데
-혹시 html에서 각각의 스킬 %가 들어간 span에 class값을 부여한 다음에 그 class값으로 css에서 조절하는 것도 가능하지 않나요?  */
-
-.skillset__right {
-  flex-basis: 40%;
-}
-
-.tools {
-  background-color: grey;
-}
-
-.tools,
-.etc {
-  padding: 20px;
+.skills__words__first{
+  margin-bottom: 30px;
 }
 
 /* contact */
@@ -419,6 +375,23 @@ p {
   padding-right: 8px; 
 }
 
+/* arrow up */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 30px;
+  color: var(--color-orange);
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+.arrow-up.visible {
+  display: block;
+}
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
