@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selly Portfolio</title>
+    <title>Seyoung Portfolio</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="20200721script.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- ctrl+/(slash)누르면 자동으로 코멘드 남겨진다 -->
     <!-- navbar -->
     <nav id="navbar">
       <!-- id 생성 단축키: nav#navbar -->
@@ -22,9 +21,7 @@
         <ul class="navbar__menu">
           <li class="navbar__menu__item active">Home</li>
           <li class="navbar__menu__item">About</li>
-          <li class="navbar__menu__item">Skills</li>
-          <li class="navbar__menu__item">My work</li>
-          <li class="navbar__menu__item">Testimonial</li>
+          <li class="navbar__menu__item">Portfolio</li>
           <li class="navbar__menu__item">Contact</li>
         </ul>
         <!-- ul.navbar__menu>li.navbar__menu__item*6-->
@@ -37,22 +34,26 @@
         alt="selly's profile photo"
         class="home__avatar"
       />
-      <h1 class="home__title">Hello! </br> I'm Seyoung</h1>
-      <h3 class="home__description">I'm a cuttiest CUTIE-PIE in the world </h3>
+      <h1 class="home__title">Hello👋 </br> I'm Seyoung</h1>
+      <h3 class="home__description">A software Engineer currently living in Seoul, Korea</h3>
     <button class="home__contact">contact me</button>
     </section>
     <!-- About -->
     <section id="about" class="section section__container">
-      <h1>About me</h1>
+      <div class="about__description">
+      <h1 class="about__me">About me</h1>
       <p>
-       I worked as a photagrapher and a barista. and now want to change my career to a front-end developer 
+        I'm a front-end developer and previously photorapher. I graduated with a Bachelor's in Art Photography in Korea and worked as a freelance/travel photographer in India, Australia, Korea, and Canada for the past few years. </br>
+        I have a huge passion on art, design, writing, photography, coffee(I actually worked as a part-time barista for an year 😁) and running. </br>
+        I'm opend-minded, creative and good at communication.
       </p>
+    </div>
 <div class="about__majors">
   <div class="major">
     <div class="major__icon">
-      <i class="fab fa-html5"></i>
+      <i class="fas fa-code"></i>
     </div>
-      <h2 class="major__title">HTML </h2>
+      <h2 class="major__title">Ruby on rails</h2>
  
     </div>
     <div class="major">
@@ -76,101 +77,124 @@
 </div>
     </section>
 
+    <!-- Work -->
+  <section id="work" class="section">
+    <h1>My work</h1>
+    <h3>Projects</h3>
+    <div class="work__categories">
+    <button class="category__btn">All<span class="category__count">4</span></button>
+    <button class="category__btn">Front-end<span class="category__count">2</span></button>
+    <button class="category__btn">Back-end<span class="category__count">2</span></button>
+    </div>
+
+    <div class="work__projects"> 
+      <a href="http://www.we-runners.run/" class="project" target="blank">
+        <img src="images/werun.JPG" alt="werun">
+        <div class="project__description">
+        <h3>We Run</h3>
+        <span>Find your running buddy around</span>
+        </div>
+      </a>
+
+      <a href="https://jsy-cocktail-app.herokuapp.com/" class="project" target="blank">
+        <img src="images/cocktail.JPG" alt="cocktail">
+        <div class="project__description">
+        <h3>Cocktail</h3>
+        <span>Cocktail recipes organizer</span>
+        </div>
+      </a>
+
+      <a href="https://seyoungjoo.github.io/profile/" class="project" target="blank">
+        <img src="images/BLOG.JPG" alt="blog">
+        <div class="project__description">
+        <h3>Blog</h3>
+        <span>Seyoung Joo profile</span>
+        </div>
+      </a>
+
+      <a href="https://seyoungjoo.github.io/dotori/" class="project" target="blank">
+        <img src="images/dotori.JPG" alt="dotori" class="project__img">
+        <div class="project__description">
+        <h3>Dotori</h3>
+        <span>My dog's website</span>
+        </div>
+      </a>
+    </div>
+
+
+    </section>
+
+    
     <!-- skills -->
     <section id="skills" class="section">
-<div class="section__container">
-      <h1>Skills</h1>
-      <h2>Skills & Attributes</h2>
-      <p>Capable of work within a team and independently. Ability to plan and time schedule. work under stick time pressure and adapt quickly when needed.</p>
-      <div class="skillset">
-        <div class="skillset__left">
-        <h3 class="skillset__title">Skills</h3>
-        <div class="skill">
-          <div class="skill__description">
-            <span>HTML</span>
-            <span>99%</span>
-          </div>
-<div class="skill__bar">
-  <div class="skill__value">
-</div>
-</div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span >CSS</span>
-            <span >99%</span>
-          </div>
-<div class="skill__bar">
-  <div class="skill__value1">
-</div>
-</div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>Javascript</span>
-            <span>60%</span>
-          </div>
-<div class="skill__bar">
-  <div class="skill__value">
-</div>
-</div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>typoscript</span>
-            <span >0%</span>
-          </div>
-<div class="skill__bar">
-  <div class="skill__value">
-</div>
-</div>
-        </div>
-        </div>
-        <div class="skillset__right">
-<div class="tools">  <h3 class="skillset__title">Tools</h3>
-<ul class="tools__list">
-<li><span>Visual Studio Code</span></li>
-<li><span>Subline Text</span></li>
-</ul>
-</div>
-<div class="etc">  <h3 class="skillset__title">ETC</h3>
-<ul class="etc__list">
-<li><span>Git</span></li>
-<li><span>Math</span></li>
-
-</ul>
-</div>
-        </div>
+      <div class="section__container">
+            <h1>Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p>Capable of work within a team and independently. Ability to plan and time schedule. work under stick time pressure and adapt quickly when needed.</p>
+            <div class="skillset">
+              <div class="skillset__left">
+              <h3 class="skillset__title">Skills</h3>
+              <div class="skill">
+                <div class="skill__description">
+                  <span>HTML</span>
+                  <span>99%</span>
+                </div>
+      <div class="skill__bar">
+        <div class="skill__value">
       </div>
       </div>
-    </div>
-    </section>
+              </div>
+              <div class="skill">
+                <div class="skill__description">
+                  <span >CSS</span>
+                  <span >99%</span>
+                </div>
+      <div class="skill__bar">
+        <div class="skill__value1">
+      </div>
+      </div>
+              </div>
+              <div class="skill">
+                <div class="skill__description">
+                  <span>Javascript</span>
+                  <span>60%</span>
+                </div>
+      <div class="skill__bar">
+        <div class="skill__value">
+      </div>
+      </div>
+              </div>
+              <div class="skill">
+                <div class="skill__description">
+                  <span>typoscript</span>
+                  <span >0%</span>
+                </div>
+      <div class="skill__bar">
+        <div class="skill__value">
+      </div>
+      </div>
+              </div>
+              </div>
+              <div class="skillset__right">
+      <div class="tools">  <h3 class="skillset__title">Tools</h3>
+      <ul class="tools__list">
+      <li><span>Visual Studio Code</span></li>
+      <li><span>Subline Text</span></li>
+      </ul>
+      </div>
+      <div class="etc">  <h3 class="skillset__title">ETC</h3>
+      <ul class="etc__list">
+      <li><span>Git</span></li>
+      <li><span>Math</span></li>
+      
+      </ul>
+      </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </section>
 
-    <!-- Work -->
-    <section id="work" class="section">
-<h1>My work</h1>
-<h3>Projects</h3>
-<div class="work__categories">
-<button class="category__btn">All<span class="category__count">8</span></button>
-<button class="category__btn">Project1<span class="category__count">3</span></button>
-<button class="category__btn">Project2<span class="category__count">5</span></button>
-</div>
-
-<div class="work__projects"> <!-- 이 안에 내가 만든 프로젝트 깃헙 주소 연동하고, 이미지도 넣기 -->
-<a href="https://www.youtube.com" 
-class="project__img"
-target="blank"
->
-<img src="" alt="">
-<div class="project__description">
-  <h3>Youtube site</h3>
-  <span>clone coding with HTML and CSS</span>
-</div> <!-- 마우스 올렸을때 설명하는거 나오게 -->
-</a>
-</div>
-
-
-    </section>
     <!-- contact -->
     <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
