@@ -1,7 +1,6 @@
 "use strict"; //우리가 미친짓을 못하도록 미연에 방지
 
-//Navbar
-
+//Make navbar transparent when it is on the top
 //이제 navbar의 height을 알아와야함. 검색어 javascript element size (html의 element니까)
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -21,12 +20,79 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// Scroll the section
-const navbarMenu = document.querySelector(".navbar__menu"); //navbar에 있는menu요소를 navbarMenu라는 변수에 할당한 다음에
-navbarMenu.addEventListener(
-  //navbarMenu에 이벤트를 추가
-  "click",
-  (event) => {
-    console.log(event.target);
+// Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
   }
-); //클릭이 되면 우리가 등록한 함수가 호출이 되도록
+  navbarMenu.classList.remove('open');
+  scrollIntoView(link);
+});
+
+
+// Handle click on "contact me" button on home
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+// Make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 1.2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+});
+
+// Handle click on the "arrow up" button
+arrowUp.addEventListener('click', () => {
+  scrollIntoView('#home');
+});
+
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector('.category__btn.selected');
+  if (active != null) {
+    active.classList.remove('selected');
+  }
+  e.target.classList.add('selected');
+
+  projectContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim-out');
+  }, 300);
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
