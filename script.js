@@ -1,5 +1,6 @@
 "use strict";
 
+
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -22,7 +23,6 @@ navbarMenu.addEventListener('click', (event) => {
   navbarMenu.classList.remove('open');
   scrollIntoView(link);
 });
-
 
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
