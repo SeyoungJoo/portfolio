@@ -1,0 +1,323 @@
+/* Global */
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* size */
+  --size-border-radius: 4px;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*body에 기본적으로 들어가있는 margin값이 있어서 0으로 바꿔줌*/
+  margin: 0;
+  cursor: default; /*텍스트 위에 커서 가져다 댔을때 이걸 안하면 텍스트 입력하는 커서로 바뀜.*/
+}
+
+a {
+  text-decoration: none; /*nav바에 selly글자에 넣어둔 링크에 밑줄이 자동으로 들어가 있어서 그 밑줄을 지워줌.*/
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none; /*리스트들 앞에 붙어있던 점들을 다 빼줌*/
+  padding-left: 0;
+}
+
+button {
+  /*home에 있는 contact me 버튼의 기본적인 속성들을 없애는 작업*/
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed; /*항상 제일 위에 고정되어 있으니까 fixed로.*/
+  width: 100%; /*position fixed를 해서 부모위로 나오게했더니 너비가 100%가 아니게 바뀌어서 이렇게 새로 설정해준거임. 원래는 그냥 둬도 됨. */
+  display: flex; /*flex박스로 해서 박스가 양쪽에 나올 수 있도록*/
+
+  justify-content: space-between; /*지금 중심축이 수평측인데, 중심축에서 정렬할 수 있는건 justify-content니까. space between 을 이용해서 간격이 떨어져있도록*/
+  background-color: transparent;
+  align-items: center; /*지금 중심은 수평쪽이고 수직은 반대니까. 반대로 정리할대는 align-items를 쓰셔서 센터로 만들어줍니다.*/
+  color: var(--color-white);
+  padding: 16px;
+  transition: all 300ms ease-in-out;
+}
+
+#navbar.navbar--dark {
+  /*navbar이면서 navbar--dark일때*/
+  background-color: #c0c0c0;
+  padding: 6px;
+}
+
+.navbar__menu {
+  display: flex; /*수직으로 정렬됐던게 수평으로 바뀜. flex가 되지 않으면 li(블럭레벨이라) 아이템 하나당 한줄씩 나온다*/
+}
+
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: ;
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer; /*사용자에게 이거 클릭이 가능해라고 이야기해주는 방법*/
+  border-radius: 4px;
+}
+
+.navbar__menu__item.active {
+  border: 1px solid white;
+}
+
+.navbar__menu__item:hover {
+  /*hover는 마우스가 올라갔을때의 효과를 말함*/
+  background-color: var(--color-dark-pink);
+}
+
+/* Home */
+#home {
+  background: url(images/homebackground.png) center/cover no-repeat; /*cover은 반응형 되도록 하는거*/
+  padding: 40px;
+  padding-top: 130px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: white;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 20px;
+  padding: 4px;
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+}
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px; /*보통 1000px에서 1200px이 데스크탑에서 편하게 볼 수 있는 사이즈*/
+  margin: auto; /*마진을 골고루 넣게끔*/
+}
+
+.section__container {
+  max-width: 1500px;
+}
+
+/* About */
+
+.major {
+  flex-basis: 33.3%;
+}
+
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0; /*위아래로 80, 양 옆은 0*/
+}
+
+.major__icon {
+  width: 130px;
+  height: 130px;
+  font-size: 70px; /*awesome pont에서 가져온 아이콘들도 결국은 font이기 때문에 폰트사이즈로 조정해줌*/
+  line-height: 130px; /*수평으로는 중간에 왔는데 수직으로는 중간에 안왔으면, line-height를 이용해서 height만큼 숫자를 넣어준다.*/
+  color: cornflowerblue;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: auto;
+}
+.major__icon i {
+  /*밑에 코드를 먼저 썼었는데, 너무 급작스럽게 변하니까 이 코드를 새로 추가하는 것.*/
+  transition: all 300ms ease; /*모든 i에 효과를 주면서, 기간은 300ms에 ease옵션으로 하자. (250~300ms가 사용자가 너무 답답함을 느끼지 않을 정도의 표준화된 수치)*/
+}
+.major__icon:hover i /*major__icon에 있는 i에 효과를 주는것. 아이콘 위에 마우스가 올라가면, 색깔이 바뀌게 하는거*/ {
+  color: pink;
+  transform: rotate(30deg) scale(1.1); /*css에서 움직이거나 크기를 키우는 것은 transform을 이용하면 된다*/
+}
+
+.jobs__logo {
+  width: 100px;
+  margin: 0 0 0 50px;
+}
+.jobs {
+  display: flex;
+  align-items: center;
+}
+
+/* Skill */
+
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: lightslategray;
+  color: var(--color-white);
+  margin: 20px 0;
+}
+
+.skillset__title {
+  color: var(--color-light-white);
+  margin: auto;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: darkgray;
+  padding: 20px 40px;
+}
+
+.skill {
+  margin-bottom: 8px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%; /*div는 안에 컨텐츠가 없기 때문에 width나 height를 지정해주어야 함*/
+  height: 3px;
+  background-color: grey;
+}
+
+.skill__value1 {
+  width: 100%;
+  height: 3px;
+  background-color: orange;
+}
+
+.skill__value2 {
+  width: 90%;
+  height: 3px;
+  background-color: orange;
+}
+
+/* skill__value에서 오렌지색상으로 스킬바를 채우는 부분을 html에서 주는거라고 하셨는데
+혹시 html에서 각각의 스킬 %가 들어간 span에 class값을 부여한 다음에 그 class값으로 css에서 조절하는 것도 가능하지 않나요?  */
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: grey;
+}
+
+.tools,
+.etc {
+  padding: 20px;
+}
+
+/* Work */
+.work__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  border: 1px solid;
+  background-color: orangered;
+  border-radius: 50%;
+  color: white;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block; /*inline block으로 바꾸는 이유는, html에서 이게 span안에 있기 때문에 너무 꽉 감싸주고 있어서 동그라미 모양이 안예쁘기 때문임.*/
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all 120ms ease-in;
+}
