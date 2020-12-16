@@ -220,6 +220,103 @@ p {
   align-items: center;
 }
 
+/* Work */
+.work__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  border: 1px solid;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  color: white;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block; /*inline block으로 바꾸는 이유는, html에서 이게 span안에 있기 때문에 너무 꽉 감싸주고 있어서 동그라미 모양이 안예쁘기 때문임.*/
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all 120ms ease-in;
+}
+
+.work__projects{
+  display:flex;
+  flex-wrap: wrap; /*한자리를 차지하면 그 다음으로 넘어가게끔*/
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  width: 500px;
+  height: 270px;
+  margin: 2px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__description{
+  position: absolute;
+  top: 0;
+  left: 0; /*position absolute하면 위치도 같이 지정해줘야함. top이랑 left로. 그리고 .project도 relative로 바꿔줌*/
+  background-color: var(--color-blue);
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 120ms ease-in;
+}
+
+.project:hover .project__description{ /*프로젝트에 hover되면 descrition에 효과주는거임*/
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description h3{
+  color: white;
+}
+
+.project__description h3:after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%; /*이 두줄이 왼쪽에 있는걸 가운데로 끌어오는거*/
+  margin-left: -25px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-orange);
+  margin-top: 8px;
+}
+
 /* Skill */
 
 #skills {
@@ -285,43 +382,4 @@ p {
 .tools,
 .etc {
   padding: 20px;
-}
-
-/* Work */
-.work__categories {
-  margin: 40px;
-}
-
-.category__btn {
-  border: 1px solid var(--color-dark-white);
-  border-radius: var(--size-border-radius);
-  font-size: var(--font-regular);
-  padding: 8px 48px;
-}
-
-.category__btn.active,
-.category__btn:hover {
-  background-color: var(--color-pink);
-  color: var(--color-white);
-}
-
-.category__btn:hover .category__count {
-  opacity: 1;
-  top: 0;
-}
-
-.category__count {
-  border: 1px solid;
-  background-color: orangered;
-  border-radius: 50%;
-  color: white;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  display: inline-block; /*inline block으로 바꾸는 이유는, html에서 이게 span안에 있기 때문에 너무 꽉 감싸주고 있어서 동그라미 모양이 안예쁘기 때문임.*/
-  position: relative;
-  top: -20px;
-  left: 4px;
-  opacity: 0;
-  transition: all 120ms ease-in;
 }
