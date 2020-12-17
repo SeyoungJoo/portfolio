@@ -4,7 +4,7 @@
   --color-white: #ffffff;
   --color-blue: #0a043c;
   --color-yellow: #ff9642;
-  --color-orange: #f6830f;
+  --color-orange: #fecd1a;
 
   /* Font size */
   --font-large: 40px;
@@ -96,7 +96,6 @@ p {
 }
 
 #navbar.navbar--dark {
-
   background-color: #0a043c;
   padding: 0 16px;
 }
@@ -122,7 +121,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: #db6400;
+  background-color: var(--color-orange);
 }
 
 /* Home */
@@ -150,7 +149,6 @@ p {
 .home__contact {
   color: white;
   font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
   margin: 20px;
   padding: 4px;
   border: 2px solid var(--color-white);
@@ -177,6 +175,8 @@ p {
 
 .about__me {
   margin-bottom: 24px;
+  background-image: linear-gradient(transparent, transparent 70%, var(--color-orange) 0, var(--color-orange) 85%, transparent 0);
+  display: inline;
 }
 
 .major {
@@ -216,6 +216,11 @@ p {
   margin: 0;
 }
 
+.section__container > h1 {
+  background-image: linear-gradient(transparent, transparent 70%, var(--color-orange) 0, var(--color-orange) 85%, transparent 0);
+  display: inline;
+}
+
 .work__categories {
   margin: 40px;
 }
@@ -230,7 +235,7 @@ p {
 .category__btn.active,
 .category__btn:hover {
   background-color: var(--color-blue);
-  color: var(--color-orange);
+  color: white;
 }
 
 .category__btn.active .category__count,
@@ -241,7 +246,7 @@ p {
 
 .category__count {
   border: 1px solid;
-  background-color: var(--color-blue);
+  background-color: var(--color-orange);
   border-radius: 50%;
   color: white;
   width: 24px;
@@ -316,21 +321,24 @@ p {
 
 /* Skill */
 .section__skills {
-  margin: 200px auto;
+  margin: 180px auto;
   text-align: center;
 }
 
-.skill__header {
-  margin-bottom: 32px;
-}
-
 .skill__button {
+
   font-size: 16px;
+  background-color: var(--color-blue);
+  color: white;
   border: 1px solid var(--color-blue);
   border-radius: 32px;
   width: 80px;
   padding: 8px 16px;
   margin: 0 5px;
+}
+
+.skills__words {
+  margin-top: 40px;
 }
 
 .skills__words__first{
@@ -344,7 +352,19 @@ p {
 
 .section__contact{
   text-align: center;
-  padding: 50px;
+  padding: 35px;
+}
+
+.contact__title:before {
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  height: 2px;
+  margin-bottom: 12px;
+  border-top: .5rem double var(--color-orange);
 }
 
 .contact__title,
