@@ -165,6 +165,7 @@ p {
 
 .section__container {
   max-width: 1500px;
+  margin: 0 auto;
 }
 
 /* About */
