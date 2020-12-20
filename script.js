@@ -73,7 +73,7 @@ workBtnContainer.addEventListener('click', (e) => {
   setTimeout(() => {
     projects.forEach((project) => {
       console.log(project.dataset.type);
-      if (filter === '*' || filter === project.dataset.type) {
+      if (filter === '*' || project.dataset.type.includes(filter)) {
         project.classList.remove('invisible');
       } else {
         project.classList.add('invisible');
