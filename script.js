@@ -72,7 +72,6 @@ workBtnContainer.addEventListener('click', (e) => {
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
     projects.forEach((project) => {
-      console.log(project.dataset.type);
       if (filter === '*' || project.dataset.type.includes(filter)) {
         project.classList.remove('invisible');
       } else {
