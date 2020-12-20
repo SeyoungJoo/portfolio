@@ -28,7 +28,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   cursor: default;
 }
@@ -44,7 +44,6 @@ ul {
 }
 
 button {
-
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -83,16 +82,16 @@ p {
 
 /* Navbar */
 #navbar {
-  position: fixed; 
+  position: fixed;
   width: 100%;
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
   background-color: transparent;
-  align-items: center; 
+  align-items: center;
   color: var(--color-white);
   padding: 0 16px;
   transition: all 300ms ease-in-out;
-  z-index: 1; 
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
@@ -105,19 +104,15 @@ p {
 }
 
 .navbar__logo {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: var(--font-regular);
 }
 
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
-  cursor: pointer; 
+  cursor: pointer;
   border-radius: 4px;
-}
-
-.navbar__menu__item.active {
-  border: 1px solid white;
 }
 
 .navbar__menu__item:hover {
@@ -126,7 +121,7 @@ p {
 
 /* Home */
 #home {
-  background: url(images/homebackground.png) center/cover no-repeat; 
+  background: url(images/homebackground.png) center/cover no-repeat;
   padding: 40px;
   padding-top: 130px;
   text-align: center;
@@ -159,8 +154,8 @@ p {
 .section {
   padding: 50px;
   text-align: center;
-  max-width: 1200px; 
-  margin: auto; 
+  max-width: 1200px;
+  margin: auto;
 }
 
 .section__container {
@@ -176,7 +171,13 @@ p {
 
 .about__me {
   margin-bottom: 24px;
-  background-image: linear-gradient(transparent, transparent 70%, var(--color-orange) 0, var(--color-orange) 85%, transparent 0);
+  background-image: linear-gradient(
+    transparent,
+    transparent 70%,
+    var(--color-orange) 0,
+    var(--color-orange) 85%,
+    transparent 0
+  );
   display: inline;
 }
 
@@ -193,9 +194,9 @@ p {
 .major__icon {
   width: 130px;
   height: 130px;
-  font-size: 70px; 
-  line-height: 130px; 
-  color: var( --color-blue);
+  font-size: 70px;
+  line-height: 130px;
+  color: var(--color-blue);
   border: 1px solid black;
   border-radius: 50%;
   margin: auto;
@@ -205,9 +206,8 @@ p {
 }
 .major__icon:hover i {
   color: var(--color-orange);
-  transform: rotate(30deg) scale(1.1); 
+  transform: rotate(30deg) scale(1.1);
 }
-
 
 /* Work */
 .section__work {
@@ -218,7 +218,13 @@ p {
 }
 
 .section__container > h1 {
-  background-image: linear-gradient(transparent, transparent 70%, var(--color-orange) 0, var(--color-orange) 85%, transparent 0);
+  background-image: linear-gradient(
+    transparent,
+    transparent 70%,
+    var(--color-orange) 0,
+    var(--color-orange) 85%,
+    transparent 0
+  );
   display: inline;
 }
 
@@ -231,15 +237,16 @@ p {
   border-radius: var(--size-border-radius);
   font-size: 16px;
   padding: 8px 48px;
+  position: relative;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-blue);
   color: white;
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
@@ -254,17 +261,24 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all 200ms ease-in;
 }
 
-.work__projects{
-  display:flex;
-  flex-wrap: wrap; 
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all 300ms ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.9) translateY(40px);
 }
 
 .project {
@@ -278,13 +292,17 @@ p {
   background-color: white;
 }
 
+.project.invisible {
+  display: none;
+}
+
 .project__img {
   max-width: 100%;
   max-height: 100%;
   align-self: center;
 }
 
-.project__description{
+.project__description {
   position: absolute;
   top: 0;
   left: 0; /*position absolute하면 위치도 같이 지정해줘야함. top이랑 left로. 그리고 .project도 relative로 바꿔줌*/
@@ -299,17 +317,18 @@ p {
   transition: all 300ms ease-in;
 }
 
-.project:hover .project__description{ /*프로젝트에 hover되면 descrition에 효과주는거임*/
+.project:hover .project__description {
+  /*프로젝트에 hover되면 descrition에 효과주는거임*/
   opacity: 0.8;
   transform: translateY(0px);
 }
 
-.project__description h3{
+.project__description h3 {
   color: white;
 }
 
 .project__description h3:after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   left: 50%;
@@ -327,7 +346,6 @@ p {
 }
 
 .skill__button {
-
   font-size: 16px;
   background-color: var(--color-blue);
   color: white;
@@ -342,22 +360,22 @@ p {
   margin-top: 40px;
 }
 
-.skills__words__first{
+.skills__words__first {
   margin-bottom: 30px;
 }
 
 /* contact */
-#contact{
-  background-color:  var(--color-blue);
+#contact {
+  background-color: var(--color-blue);
 }
 
-.section__contact{
+.section__contact {
   text-align: center;
   padding: 35px;
 }
 
 .contact__title:before {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   left: 50%;
@@ -365,7 +383,7 @@ p {
   width: 100px;
   height: 2px;
   margin-bottom: 12px;
-  border-top: .5rem double var(--color-orange);
+  border-top: 0.5rem double var(--color-orange);
 }
 
 .contact__title,
@@ -373,11 +391,11 @@ p {
   color: white;
 }
 
-.contact__email{
+.contact__email {
   font-size: 18px;
 }
 
-.contact__email:hover{
+.contact__email:hover {
   text-decoration: underline;
 }
 
@@ -392,7 +410,7 @@ p {
 }
 
 .fa-github {
-  padding-right: 8px; 
+  padding-right: 8px;
 }
 
 /* arrow up */
@@ -414,7 +432,6 @@ p {
   #navbar {
     flex-direction: column;
   }
-
 
   .about__majors {
     flex-direction: column;
