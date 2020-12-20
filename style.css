@@ -145,7 +145,7 @@ p {
   color: white;
   font-size: var(--font-regular);
   margin: 20px;
-  padding: 4px;
+  padding: 6px 14px;
   border: 2px solid var(--color-white);
   border-radius: 4px;
 }
@@ -366,7 +366,7 @@ p {
 
 /* contact */
 #contact {
-  background-color: var(--color-blue);
+  background-color: #d6e0f0;
 }
 
 .section__contact {
