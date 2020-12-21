@@ -353,13 +353,15 @@ p {
   color: white;
   border: 1px solid var(--color-blue);
   border-radius: 32px;
-  width: 80px;
+  margin: 8px 6px;
   padding: 8px 16px;
-  margin: 0 5px;
 }
 
 .skills__words {
-  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 32px;
 }
 
 .skills__words__first {
@@ -431,8 +433,22 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
-  #navbar {
+  #navbar,
+  #navbar.navbar--dark {
     flex-direction: column;
+    padding-top: 16px;
+  }
+
+  h1 {
+    font-size: var(--font-medium);
+  }
+
+  .home__contact {
+    margin: 0;
+  }
+
+  #about {
+    width: 100%;
   }
 
   .about__majors {
@@ -443,8 +459,12 @@ p {
     margin-bottom: 38px;
   }
 
-  .skills__words {
-    flex-direction: column;
+  .category__btn {
+    width: 70%;
+  }
+
+  .skill__button {
+    margin-top: 16px;
   }
 
   .project {
