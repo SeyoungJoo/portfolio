@@ -390,7 +390,7 @@ p {
 
 .contact__title,
 .contact__email {
-  color: white;
+  color: var(--color-blue);
 }
 
 .contact__email {
@@ -413,6 +413,11 @@ p {
 
 .fa-github {
   padding-right: 8px;
+  color: var(--color-blue);
+}
+
+.fab {
+  color: var(--color-blue);
 }
 
 /* arrow up */
@@ -449,5 +454,10 @@ p {
 
   .project {
     flex-grow: 1;
+  }
+
+  .arrouw-up {
+    right: 15px;
+    bottom: 15px;
   }
 }
