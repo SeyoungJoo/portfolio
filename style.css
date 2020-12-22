@@ -476,8 +476,7 @@ p {
     flex-grow: 1;
   }
 
-  .arrouw-up {
-    right: 15px;
-    bottom: 15px;
+  .arrow-up {
+    right: 20px;
   }
 }
