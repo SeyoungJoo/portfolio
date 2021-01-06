@@ -119,15 +119,22 @@ p {
   background-color: var(--color-orange);
 }
 
-/* Home */
-#home {
+/* banner */
+#banner {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(images/homebackground.png) center/cover no-repeat;
 
   padding: 40px;
   padding-top: 130px;
   text-align: center;
-  height: 100vh;
+  height: 50vh;
+}
+
+/* Home */
+#home {
+  padding: 40px;
+  padding-top: 130px;
+  text-align: center;
 }
 
 .home__avatar {
@@ -140,11 +147,11 @@ p {
 
 .home__title,
 .home__description {
-  color: var(--color-white);
+  color: black;
 }
 
 .home__contact {
-  color: white;
+  color: black;
   font-size: var(--font-small);
   margin: 20px;
   padding: 12px 22px;
