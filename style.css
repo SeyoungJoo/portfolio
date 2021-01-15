@@ -432,7 +432,8 @@ p {
   color: var(--color-orange);
 }
 
-.fa-github {
+.fa-github,
+.fa-blogger {
   padding-right: 8px;
   color: var(--color-blue);
 }
