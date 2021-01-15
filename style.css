@@ -7,7 +7,7 @@
   --color-orange: #fecd1a;
 
   /* Font size */
-  --font-large: 40px;
+  --font-large: 50px;
   --font-medium: 28px;
   --font-regular: 18px;
   --font-small: 16px;
@@ -52,6 +52,7 @@ button {
 
 /* Typography */
 h1 {
+  font-family: Abril Fatface, Times New Roman, Times, serif;
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
@@ -127,31 +128,24 @@ p {
   padding: 40px;
   padding-top: 130px;
   text-align: center;
-  height: 50vh;
+  height: 80vh;
 }
 
 /* Home */
-#home {
-  padding: 40px;
-  padding-top: 130px;
-  text-align: center;
-}
 
-.home__avatar {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 1px solid white;
-  object-fit: cover;
+.home {
+  transform: translate(50%, 50%);
+  margin: auto;
+  text-align: center;
 }
 
 .home__title,
 .home__description {
-  color: black;
+  color: white;
 }
 
 .home__contact {
-  color: black;
+  color: white;
   font-size: var(--font-small);
   margin: 20px;
   padding: 12px 22px;
