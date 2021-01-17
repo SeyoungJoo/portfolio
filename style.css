@@ -359,6 +359,7 @@ h3 {
 }
 
 .portfolio__item {
+  position: relative;
   background: var(--clr-accent);
   overflow: hidden;
 }
@@ -371,6 +372,37 @@ h3 {
   transform: scale(1, 2);
   opacity: 0.75;
   font-weight: var(--fw-reg);
+}
+
+.project__description {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  color: var(--clr-accent);
+  background-color: var(--clr-dark);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.portfolio__item:hover .project__description {
+  opacity: 0.8;
+}
+
+.project__description h3:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  left: 50%;
+  position: relative;
+  margin-left: -30px;
+  margin-top: 8px;
+  background-color: white;
 }
 
 /* footer*/
