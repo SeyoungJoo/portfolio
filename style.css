@@ -247,6 +247,7 @@ h3 {
 }
 
 .service {
+  min-width: 300px;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -276,6 +277,15 @@ h3 {
 
 .skills__words__first {
   margin-bottom: 30px;
+}
+
+.blog_link {
+  color: white;
+  text-decoration: underline;
+}
+
+.blog_link:hover {
+  opacity: 0.7;
 }
 
 @media (min-width: 800px) {
