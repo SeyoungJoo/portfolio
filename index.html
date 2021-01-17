@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seyoung Portfolio</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d182ecc566.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
     <link rel="shortcut icon" href="images/falcon.JPG" />
     <meta property="og:title" content="Seyoung J - Full-stack developer">
     <meta property="og:type" content="website" />
@@ -33,73 +40,37 @@
     </nav>
 
     <!-- banner-->
-    <section id="banner">
-      <div class="home">
-        <h1 class="home__title">Seyoung Joo</h1>
-        <h3 class="home__description">Front-end developer who love UI/UX CSS and REACT</h3><br/>
-        <button class="home__contact">My work</button>
-      </div>
-    </section>
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro">
+        Hi, I am <strong>Seyoung</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">Front-end Developer</p>
+      <img src="./images/me2.JPG" alt="Seyoung with a laptop" class="intro__img">
+    </section> 
 
-    <!-- About -->
-    <section id="about" class="section section__container">
-      <h1 class="about__me">About me</h1>
-      <div class="about_container">
-      <img src="./images/me.JPG" />
-      <p>
-        I'm a front-end developer and previously photographer. I graduated with a Bachelor's in Art Photography in Korea and worked as a freelance photographer in Canada, Australia and Korea for the past few years.
-        I have a strong passion on coding, design, writing, photography, coffee (I actually worked as a part-time barista for an year 😁) and running 🏃‍♂️ </br>
-        I'm opend-minded, creative and self-motivated. Capable of work within a team and independently. Ability to plan and time schedule. work under stick time pressure and adapt quickly when needed.
-      </p>
-      </div>
-    </section>
+    <!--Skills -->
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title--services">Skills</h2>
+      <div class="services">
+        <div class="service">
+          <h3>CSS</h3>
+          <p>I love eating! My favorite food is sausage. but actually, I love everything to eat. my mom also said that I drink water so well. I am so proud of myself</p>
+        </div><!--/service-->
 
-    <!-- Work -->
-  <section id="work" class="section__work">
-   <div class="section__container">
-    <h1>Portfolio</h1>
 
-    <div class="work__projects"> 
-      <a href="https://werunners.herokuapp.com/" class="project" target="blank" data-type="back-end, front-end">
-        <img src="images/werun.JPG" alt="werun" class="project__img">
-        <div class="project__description">
-        <h3>We Run</h3>
-        <span>Find your running buddy around</span>
-        </div>
-      </a>
+        <div class="service">
+          <h3>React</h3>
+          <p>I like playing with toys. I have 3 rag dolls. a tiger, a fish, and a bulldog. I also have a ball that snacks come up whenever I roll it. isn't it so cool?</p>
+        </div><!--/service-->
 
-      <a href="https://seyoungjoo.github.io/dotori/" class="project" target="blank" data-type="front-end">
-        <img src="images/dotori.JPG" alt="dotori" class="project__img">
-        <div class="project__description">
-        <h3>Dotori</h3>
-        <span>My dog's website</span>
-        </div>
-      </a>
 
-      <a href="http://mister-cocktail-on.herokuapp.com/" class="project" target="blank" data-type="front-end, back-end">
-        <img src="images/cocktail.JPG" alt="cocktail" class="project__img">
-        <div class="project__description">
-        <h3>Mr.Cocktail</h3>
-        <span>Cocktail recipes organizer</span>
-        </div>
-      </a>
+        <div class="service">
+          <h3>Javascript</h3>
+          <p>I sleep most of the time a day. I can sleep almost 17hours a day! hehe, I love to sleep. I can sleep everywhere and whenever! </p>
+        </div><!--/service-->
 
-      <a href="https://seyoungjoo.github.io/profile/" class="project" target="blank" data-type="front-end">
-        <img src="images/BLOG.JPG" alt="blog" class="project__img">
-        <div class="project__description">
-        <h3>Blog</h3>
-        <span>Seyoung Joo profile</span>
-        </div>
-      </a>
-    </div>
-   </div>
-  </section>
-
- <!-- skills -->
-  <section id="skills" class="section__skills">
-    <div class="section__container">
-      <h1 class="skill__header">Skills</h1> 
-        <div class="skills__words">
+      </div><!--/ services-->
+      <div class="skills__words">
         <span class="skill__button">Javascript</span>
         <span class="skill__button">React</span>
         <span class="skill__button">Ruby</span>
@@ -110,27 +81,78 @@
         <span class="skill__button">SQL</span>
         <span class="skill__button">APIs</span>
         </div>
-    </div>
-    
-  </section>
-
-    <!-- contact -->
-    <section id="contact" class="section__contact">
-      <h1 class="contact__title">Contact Me</h1>
-      <a href="mailto:seyoungjoodv@gmail.com" class="contact__email">seyoungjoodv@gmail.com</a>
-      <div class="contact__links">
-        <a href="https://github.com/seyoungjoo" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://velog.io/@syjoo" target="_blank">
-          <i class="fab fa-blogger"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/seyoungj" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
     </section>
 
+    <!-- About -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Who I am </h2>
+      <p class="section__subtitle section__subtitle--about">curious & enthusiastic</p>
+      <div class="about-me__body">
+        <p> I'm a front-end developer and previously photographer. I graduated with a Bachelor's in Art Photography in Korea and worked as a freelance photographer in Canada, Australia and Korea for the past few years.
+        I have a strong passion on coding, design, writing, photography, coffee (I actually worked as a part-time barista for an year 😁) and running 🏃‍♂️ </br>
+        I'm opend-minded, creative and self-motivated. Capable of work within a team and independently. Ability to plan and time schedule. work under stick time pressure and adapt quickly when needed.</p>
+      </div>
+      <img src="./images/me.JPG" alt="A cornchip" class="about-me__img">
+    </section>
+
+    <!-- Work -->
+    <section class="my-work" id="work">
+      <h2 class="section__title section__title--work">Portfolio</h2>
+      <p class="section__subtitle section__subtitle--work">~My work~</p>
+
+      <div class="portfolio">
+        <a href="https://werunners.herokuapp.com" class="portfolio__item" target="_blank">
+          <img src="images/werun.JPG" alt="werun" class="portfolio__img">
+          <div class="project__description">
+            <h3>We Run</h3>
+            <span>Find your running buddy around</span>
+          </div>
+        </a>
+
+      <a href="https://seyoungjoo.github.io/dotori/" class="project" target="_blank">
+        <img src="images/dotori.JPG" alt="dotori" class="project__img">
+        <div class="project__description">
+          <h3>Dotori</h3>
+          <span>My dog's website</span>
+        </div>
+      </a>
+      
+      <a href="http://mister-cocktail-on.herokuapp.com" target="_blank" class="portfolio__item">
+        <img src="images/cocktail.JPG" alt="mister-cocktail" class="portfolio__img">
+        <div class="project__description">
+          <h3>Mr.Cocktail</h3>
+          <span>Cocktail recipes organizer</span>
+        </div>
+      </a>
+
+      <a href="https://seyoungjoo.github.io/profile" target="_blank" class="portfolio__item">
+        <img src="images/BLOG.JPG" alt="blog" class="portfolio__img">
+        <div class="project__description">
+          <h3>Blog</h3>
+          <span>Seyoung Joo profile</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+      <!--footer-->
+      <footer class="footer" id="contact">
+        <a href="mailto:seyoungjoodv@gmail.com" class="footer__link">seyoungjoodv@gmail.com</a>
+        <ul class="social-list">
+          <li class="social-list__item"><a class="social-list__link" href="https://github.com/seyoungjoo" target="_blank">
+            <i class="fab fa-github"></i>
+            </a></li>
+          <li class="social-list__item"><a class="social-list__link" href="https://velog.io/@syjoo" target="_blank">
+            <i class="fab fa-blogger"></i>
+          </a></li>
+          <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/seyoungj" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a></li>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  
     <!-- Arrow up -->
     <button class="arrow-up">
       <i class="fas fa-arrow-circle-up"></i>
