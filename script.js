@@ -23,7 +23,7 @@ navbarMenu.addEventListener('click', (event) => {
   scrollTo.scrollIntoView({behavior: "smooth"});
 });
 
-// Show "arrow up" button when scrolling down
+// arrou-up
 const homeHeight = home.getBoundingClientRect().height;
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
@@ -34,7 +34,6 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// Handle click on the "arrow up" button
 arrowUp.addEventListener('click', () => {
   scrollIntoView('.intro');
 });
